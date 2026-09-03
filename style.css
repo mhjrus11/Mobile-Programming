@@ -1,0 +1,96 @@
+/* Responsive mobile-first base styles */
+:root {
+	--color-primary: #2563eb;
+	--color-text: #1f2937;
+	--color-muted: #6b7280;
+	--color-background: #f8fafc;
+	--color-surface: #ffffff;
+	--radius: 0.75rem;
+	--shadow: 0 4px 14px rgb(15 23 42 / 0.08);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	color: var(--color-text);
+	background: var(--color-background);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	line-height: 1.6;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+	text-decoration: underline;
+}
+
+.container {
+	width: min(100% - 2rem, 72rem);
+	margin-inline: auto;
+}
+
+.card {
+	padding: 1.25rem;
+	background: var(--color-surface);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+button,
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 2.75rem;
+	padding: 0.625rem 1rem;
+	color: #fff;
+	background: var(--color-primary);
+	border: 0;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	font: inherit;
+	transition: background-color 160ms ease, transform 160ms ease;
+}
+
+button:hover,
+.button:hover {
+	background: #1d4ed8;
+}
+
+button:active,
+.button:active {
+	transform: translateY(1px);
+}
+
+@media (min-width: 640px) {
+	.container {
+		width: min(100% - 3rem, 72rem);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		transition-duration: 0.01ms !important;
+	}
+}
