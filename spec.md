@@ -1,5 +1,5 @@
 GharSewa: On-Demand Home Service Marketplace
-Problem Statement:
+Problem Statement:git
 Finding reliable home-service professionals in Nepal for services such as plumbing, electrical work, carpentry, cleaning, painting, and appliance repair is often difficult. People commonly depend on personal recommendations, social media, or informal contacts, which can result in uncertain service quality, unclear pricing, delayed responses, and lack of accountability.
 At the same time, skilled local service providers often struggle to reach customers and manage bookings efficiently. There is a need for a centralized platform that connects customers with verified professionals based on service type, location, availability, and ratings.
 GharSewa aims to solve this problem by providing a digital marketplace where customers can find, compare, book, and review verified service providers, while professionals can manage service requests and reach more customers.
