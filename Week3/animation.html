@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Interface To Animate Shape</title>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+
+                $("#Button").click(function() {
+
+                    $("#box").animate({
+                        top: "500px"
+                    }, 1000, function() {
+                        $("#box").css("background-color", "blue");
+                    })
+
+                    .animate({
+                        left: "500px"
+                    }, 1000, function() {
+                        $("#box").css("background-color", "green");
+                    })
+
+                    .animate({
+                        top: "0px"
+                    }, 1000, function() {
+                        $("#box").css("background-color", "yellow");
+                    })
+
+                    .animate({
+                        left: "0px"
+                    }, 1000, function() {
+                        $("#box").css("background-color", "red");
+                    });
+
+                });
+
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <button id="Button">Start Animation</button>
+
+        <div id="box" style="width: 100px; height: 100px; background-color: red; position: absolute; margin: 100px"></div>
+
+    </body>
+</html>
