@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Practice</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #profile-card {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border: 1px solid gray;
+        }
+
+        .highlighted {
+            border: 3px solid yellow;
+        }
+
+        .dark-mode {
+            background-color: #222 !important;
+            color: white;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .shadow {
+            box-shadow: 0 0 15px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="profile-card">
+
+        <h2 id="student-name">Rushil Maharjan</h2>
+
+        <p id="student-bio">I am an <b>IT student</b>.</p>
+
+        <input type="text" id="nickname-input">
+
+        <img id="profile-photo" src="photo.jpg" alt="Profile Picture" width="150">
+
+        <ul id="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+
+    </div>
+
+    <button id="show-name">Show Name</button>
+    <button id="change-name">Change Name</button>
+    <button id="show-bio">Show Bio</button>
+    <button id="get-input">Get Input</button>
+    <button id="set-input">Set Input</button>
+
+    <br><br>
+
+    <button id="highlight-card">Highlight Card</button>
+    <button id="remove-highlight">Remove Highlight</button>
+    <button id="toggle-dark">Toggle Dark Mode</button>
+    <button id="toggle-rounded">Toggle Rounded</button>
+
+    <br><br>
+
+    <button id="red-background">Red Background</button>
+    <button id="reset-background">Reset Background</button>
+
+    <br><br>
+
+    <button id="hide-photo">Hide Photo</button>
+    <button id="show-photo">Show Photo</button>
+    <button id="toggle-bio">Toggle Bio</button>
+
+    <br><br>
+
+    <button id="fade-out">Fade Out Card</button>
+    <button id="fade-in">Fade In Card</button>
+    <button id="fade-50">Fade to 50%</button>
+
+    <br><br>
+
+    <button id="slide-up">Slide Up Skills</button>
+    <button id="slide-down">Slide Down Skills</button>
+    <button id="slide-toggle">Slide Toggle Skills</button>
+
+    <br><br>
+
+    <button id="animate-card">Animate Card</button>
+
+    <p id="output"></p>
+
+
+    <script>
+
+        
+
+        $("#show-name").click(function() {
+            $("#output").text($("#student-name").text());
+        });
+
+        $("#change-name").click(function() {
+            $("#student-name").text("Rushil Maharjan");
+        });
+
+        $("#show-bio").click(function() {
+            $("#output").text($("#student-bio").html());
+        });
+
+        $("#get-input").click(function() {
+            $("#output").text($("#nickname-input").val());
+        });
+
+        $("#set-input").click(function() {
+            $("#nickname-input").val("jQuery Pro");
+        });
+
+
+
+        $("#highlight-card").click(function() {
+            $("#profile-card").addClass("highlighted");
+        });
+
+        $("#remove-highlight").click(function() {
+            $("#profile-card").removeClass("highlighted");
+        });
+
+        $("#toggle-dark").click(function() {
+            $("#profile-card").toggleClass("dark-mode");
+        });
+
+        $("#toggle-rounded").click(function() {
+            $("#profile-photo").toggleClass("rounded");
+        });
+
+
+        $("#red-background").click(function() {
+            $("#profile-card").css("background-color", "#e74c3c");
+        });
+
+        $("#reset-background").click(function() {
+            $("#profile-card").css("background-color", "white");
+        });
+
+
+        $("#hide-photo").click(function() {
+            $("#profile-photo").hide("slow");
+        });
+
+        $("#show-photo").click(function() {
+            $("#profile-photo").show("slow");
+        });
+
+        $("#toggle-bio").click(function() {
+            $("#student-bio").toggle();
+        });
+
+
+
+        $("#fade-out").click(function() {
+            $("#profile-card").fadeOut();
+        });
+
+        $("#fade-in").click(function() {
+            $("#profile-card").fadeIn();
+        });
+
+        $("#fade-50").click(function() {
+            $("#profile-card").fadeTo(1000, 0.5);
+        });
+
+
+        $("#slide-up").click(function() {
+            $("#skills-list").slideUp();
+        });
+
+        $("#slide-down").click(function() {
+            $("#skills-list").slideDown();
+        });
+
+        $("#slide-toggle").click(function() {
+            $("#skills-list").slideToggle();
+        });
+
+
+        $("#animate-card").click(function() {
+            $("#profile-card")
+                .animate({ marginLeft: "200px" }, 1000)
+                .animate({ marginLeft: "0px" }, 1000);
+        });
+
+
+        $("#profile-photo").mouseenter(function() {
+            $("#profile-photo").addClass("shadow");
+        });
+
+        $("#profile-photo").mouseleave(function() {
+            $("#profile-photo").removeClass("shadow");
+        });
+
+        $("#nickname-input").keydown(function(event) {
+            $("#output").text(event.key);
+        });
+
+    </script>
+
+</body>
+</html>

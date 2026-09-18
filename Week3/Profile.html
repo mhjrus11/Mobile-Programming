@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Profile Card </title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            body {
+                font-family: Arial;
+            background-color: lightgray;
+        }
+        .card {
+    width: 300px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+.card img {
+    width: 120px;
+            height: 120px;
+            border-radius: 50%;
+}
+button {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#qr {
+    display: none;
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+}
+#qr img {
+            width: 180px;
+        }
+
+        #close {
+            color: red;
+            cursor: pointer;
+            font-size: 25px;
+        }
+    
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <img src="photo.jpg" alt="Profile Picture">
+            <h2>Rushil Maharjan</h2>
+
+        <p>Address: Kathmandu, Nepal</p>
+
+        <p>Email: rushil@gmail.com</p>
+
+        <p>Phone: 9812345678</p>
+
+        <button id="showQR">Show QR</button>
+
+        </div>
+
+         <div id="qr">
+
+        <span id="close">X</span>
+
+        <h2>My QR Code</h2>
+
+        <img src="QR.png" alt="QR Code">
+
+        <p>Scan My QR Code</p>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#showQR").click(function() {
+                $("#qr").fadeIn();
+            });
+
+            $("#close").click(function() {
+                $("#qr").fadeOut();
+            });
+        });
+
+         $(".card").mouseenter(function() {
+
+                $(".card").css("background-color", "lightblue");
+
+            });
+
+
+            $(".card").mouseleave(function() {
+
+                $(".card").css("background-color", "white");
+
+            });
+
+    </script>
+
+    </body>
+</html>
