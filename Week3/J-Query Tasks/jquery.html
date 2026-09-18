@@ -4,6 +4,33 @@
     <title>jQuery Practice</title>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #profile-card {
+            width: 300px;
+            padding: 20px;
+            margin: 20px;
+            background-color: white;
+            border: 1px solid gray;
+        }
+
+        .highlighted {
+            border: 3px solid yellow;
+        }
+
+        .dark-mode {
+            background-color: #222 !important;
+            color: white;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .shadow {
+            box-shadow: 0 0 15px gray;
+        }
+    </style>
 </head>
 
 <body>
@@ -12,7 +39,7 @@
 
         <h2 id="student-name">Rushil Maharjan</h2>
 
-        <p id="student-bio">I am an IT student.</p>
+        <p id="student-bio">I am an <b>IT student</b>.</p>
 
         <input type="text" id="nickname-input">
 
@@ -70,7 +97,7 @@
 
     <script>
 
-        // GET & SET
+        
 
         $("#show-name").click(function() {
             $("#output").text($("#student-name").text());
@@ -93,7 +120,6 @@
         });
 
 
-        // CSS CLASSES
 
         $("#highlight-card").click(function() {
             $("#profile-card").addClass("highlighted");
@@ -112,18 +138,14 @@
         });
 
 
-        // CSS METHOD
-
         $("#red-background").click(function() {
-            $("#profile-card").css("background", "#e74c3c");
+            $("#profile-card").css("background-color", "#e74c3c");
         });
 
         $("#reset-background").click(function() {
-            $("#profile-card").css("background", "white");
+            $("#profile-card").css("background-color", "white");
         });
 
-
-        // HIDE & SHOW
 
         $("#hide-photo").click(function() {
             $("#profile-photo").hide("slow");
@@ -138,7 +160,6 @@
         });
 
 
-        // FADE
 
         $("#fade-out").click(function() {
             $("#profile-card").fadeOut();
@@ -153,8 +174,6 @@
         });
 
 
-        // SLIDE
-
         $("#slide-up").click(function() {
             $("#skills-list").slideUp();
         });
@@ -168,16 +187,12 @@
         });
 
 
-        // ANIMATE
-
         $("#animate-card").click(function() {
             $("#profile-card")
-                .animate({marginLeft: "200px"}, 1000)
-                .animate({marginLeft: "0px"}, 1000);
+                .animate({ marginLeft: "200px" }, 1000)
+                .animate({ marginLeft: "0px" }, 1000);
         });
 
-
-        // EVENTS
 
         $("#profile-photo").mouseenter(function() {
             $("#profile-photo").addClass("shadow");
