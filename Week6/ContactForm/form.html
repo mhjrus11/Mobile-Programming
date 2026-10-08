@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact Form</title>
+
+</head>
+
+<body>
+
+  <h1>Contact Form</h1>
+
+  <script type="module" src="form.js"></script>
+
+
+  <h2>Enter Your Details</h2>
+
+  <input
+    type="text"
+    id="contact-name"
+    placeholder="Name"
+  />
+
+  <input
+    type="email"
+    id="contact-email"
+    placeholder="Email"
+  />
+
+  <input
+    type="text"
+    id="contact-message"
+    placeholder="Message"
+  />
+
+  <button onclick="saveContact(
+    document.getElementById('contact-name').value,
+    document.getElementById('contact-email').value,
+    document.getElementById('contact-message').value
+  )">
+    Submit
+  </button>
+
+
+  <h3>Entered Contact Details</h3>
+
+  <p id="contact-result"></p>
+
+
+</body>
+
+</html>
